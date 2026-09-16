@@ -219,6 +219,37 @@ footer.site-footer {
   font-size: 0.85rem;
 }
 
+footer.site-footer p {
+  margin: 0;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0;
+  margin: 0 0 16px;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.15s ease;
+}
+
+.social-links a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.social-links .social-text {
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+}
+
 .badge {
   display: inline-block;
   padding: 0.4rem 1rem;
