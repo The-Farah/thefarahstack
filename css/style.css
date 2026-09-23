@@ -8,6 +8,9 @@
   --accent2: #ff6bd6;
   --accent3: #4ee8b5;
   --border: rgba(255, 255, 255, 0.1);
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-mono: "Courier Prime", "Courier New", ui-monospace, Menlo, Consolas, monospace;
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 * {
@@ -26,7 +29,7 @@ body {
     radial-gradient(circle at 50% 0%, #171a26, var(--bg) 65%);
   background-attachment: fixed;
   color: var(--fg);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: var(--font-body);
   line-height: 1.6;
   min-height: 100vh;
   display: flex;
@@ -50,10 +53,18 @@ a:hover {
 }
 
 .grad-text {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 600;
   background: linear-gradient(135deg, var(--accent), var(--accent2) 60%, var(--accent3));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+.brand-accent {
+  font-style: italic;
+  color: var(--accent3);
 }
 
 header.site-header {
@@ -78,6 +89,7 @@ header.site-header .avatar {
 }
 
 header.site-header .brand h1 {
+  font-family: var(--font-display);
   font-size: 2rem;
   font-weight: 800;
   margin: 0;
@@ -157,6 +169,7 @@ main {
 }
 
 .hero h2 {
+  font-family: var(--font-display);
   font-size: clamp(2.2rem, 6vw, 3.4rem);
   font-weight: 800;
   letter-spacing: -0.03em;
@@ -272,6 +285,7 @@ article.single {
 }
 
 article.single h1 {
+  font-family: var(--font-display);
   font-size: clamp(1.8rem, 4vw, 2.6rem);
   margin-bottom: 4px;
 }
@@ -766,6 +780,56 @@ footer.site-footer p {
   margin: 0;
   color: var(--muted);
   font-size: 0.88rem;
+}
+
+.diagram-embed {
+  margin: 24px 0;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.diagram-embed iframe {
+  width: 100%;
+  height: 560px;
+  border: 0;
+  display: block;
+}
+
+.diagram-open-full {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 16px;
+  background: var(--bg-raised);
+  border-bottom: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+}
+
+.diagram-open-full a {
+  font-weight: 600;
+}
+
+/* Typewriter accents live on UI chrome only — body copy stays readable sans-serif. */
+nav.site-nav a,
+.hero .eyebrow,
+.section-title,
+.post-list .meta,
+article.single .meta,
+footer.site-footer,
+.gh-stats-name em,
+.gh-stat em,
+.gh-lang-pill,
+.now-badge,
+.tag-pill,
+.tag-count,
+.arch-badge,
+.repo-meta,
+.social-links .social-text {
+  font-family: var(--font-mono);
 }
 
 .arch-badge {
