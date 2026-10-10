@@ -846,3 +846,11 @@ footer.site-footer,
   text-transform: uppercase;
   color: var(--accent2);
 }
+
+/* Newsletter signup box at the end of posts (added 2026-10-10) */
+.subscribe{margin:56px 0 12px;padding:28px 28px 8px;border:1px solid var(--border);border-radius:16px;
+  background:linear-gradient(135deg,rgba(139,157,255,.10),rgba(255,107,214,.06));}
+.subscribe-kicker{margin:0;font-family:var(--font-mono);font-size:.85rem;color:var(--accent);}
+.subscribe-title{margin:.3rem 0 .4rem;font-family:var(--font-display);font-style:italic;font-size:1.9rem;color:var(--fg);}
+.subscribe-sub{margin:0 0 12px;color:var(--muted);}
+.subscribe-frame{width:100%;max-width:520px;height:150px;border:0;background:transparent;}
