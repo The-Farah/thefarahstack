@@ -1,13 +1,15 @@
 :root {
-  color-scheme: dark;
-  --bg: #07080d;
-  --bg-raised: #12141d;
-  --fg: #f5f6f8;
-  --muted: #9aa2b1;
-  --accent: #8b9dff;
-  --accent2: #ff6bd6;
-  --accent3: #4ee8b5;
-  --border: rgba(255, 255, 255, 0.1);
+  color-scheme: light;
+  /* Warm light theme (2026-10-10): cream paper, indigo ink, pink and teal accents,
+     matching the Instagram slides and the checklist PDF. */
+  --bg: #f6efe3;
+  --bg-raised: #fffaf0;
+  --fg: #26215c;
+  --muted: #5d5884;
+  --accent: #4338ca;
+  --accent2: #d6337f;
+  --accent3: #0f8f6c;
+  --border: rgba(38, 33, 92, 0.13);
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-mono: "Courier Prime", "Courier New", ui-monospace, Menlo, Consolas, monospace;
   --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -24,9 +26,9 @@ html, body {
 
 body {
   background:
-    radial-gradient(600px circle at 12% 0%, rgba(139, 157, 255, 0.16), transparent 60%),
-    radial-gradient(700px circle at 90% 10%, rgba(255, 107, 214, 0.12), transparent 55%),
-    radial-gradient(circle at 50% 0%, #171a26, var(--bg) 65%);
+    radial-gradient(600px circle at 12% 0%, rgba(67, 56, 202, 0.07), transparent 60%),
+    radial-gradient(700px circle at 90% 10%, rgba(214, 51, 127, 0.07), transparent 55%),
+    var(--bg);
   background-attachment: fixed;
   color: var(--fg);
   font-family: var(--font-body);
@@ -90,7 +92,7 @@ header.site-header .avatar {
   border-radius: 12px;
   object-fit: cover;
   flex-shrink: 0;
-  box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px rgba(139, 157, 255, 0.4), 0 8px 24px rgba(139, 157, 255, 0.25);
+  box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px rgba(67, 56, 202, 0.4), 0 8px 24px rgba(67, 56, 202, 0.25);
 }
 
 header.site-header .brand h1 {
@@ -220,9 +222,10 @@ main {
 .post-list li {
   position: relative;
   border: 1px solid var(--border);
-  background: linear-gradient(145deg, var(--bg-raised), rgba(255, 255, 255, 0.015));
+  background: linear-gradient(145deg, var(--bg-raised), rgba(38, 33, 92, 0.02));
   border-radius: 12px;
   padding: 20px 22px 20px 26px;
+  box-shadow: 0 2px 10px rgba(38, 33, 92, 0.05);
   overflow: hidden;
   transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
 }
@@ -240,8 +243,8 @@ main {
 
 .post-list li:hover {
   transform: translateX(2px);
-  border-color: rgba(139, 157, 255, 0.4);
-  box-shadow: 0 12px 32px rgba(139, 157, 255, 0.12);
+  border-color: rgba(67, 56, 202, 0.4);
+  box-shadow: 0 12px 32px rgba(67, 56, 202, 0.12);
 }
 
 .post-list h3 {
@@ -272,7 +275,7 @@ main {
   padding: 10px 20px;
   border-radius: 999px;
   border: 1px solid var(--border);
-  background: linear-gradient(90deg, rgba(139, 157, 255, 0.08), rgba(255, 107, 214, 0.08));
+  background: linear-gradient(90deg, rgba(67, 56, 202, 0.08), rgba(214, 51, 127, 0.08));
   color: var(--fg);
   font-size: 0.88rem;
   font-weight: 600;
@@ -307,7 +310,8 @@ article.single h2 {
 }
 
 article.single pre {
-  background: var(--bg-raised);
+  background: #1f1b3a;
+  color: #f5f6f8;
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 16px;
@@ -386,7 +390,7 @@ footer.site-footer p {
 .social-links a:hover {
   color: var(--accent);
   text-decoration: none;
-  filter: drop-shadow(0 0 6px rgba(139, 157, 255, 0.6));
+  filter: drop-shadow(0 0 6px rgba(67, 56, 202, 0.6));
 }
 
 .social-links .social-text {
@@ -405,7 +409,7 @@ footer.site-footer p {
   position: relative;
   display: block;
   border: 1px solid var(--border);
-  background: linear-gradient(160deg, var(--bg-raised), rgba(255, 255, 255, 0.02));
+  background: linear-gradient(160deg, var(--bg-raised), rgba(38, 33, 92, 0.02));
   border-radius: 14px;
   padding: 20px 22px;
   overflow: hidden;
@@ -421,9 +425,9 @@ footer.site-footer p {
 }
 
 .gh-stats-card:hover {
-  border-color: rgba(139, 157, 255, 0.5);
+  border-color: rgba(67, 56, 202, 0.5);
   transform: translateY(-3px);
-  box-shadow: 0 16px 40px rgba(139, 157, 255, 0.15);
+  box-shadow: 0 16px 40px rgba(67, 56, 202, 0.15);
   text-decoration: none;
 }
 
@@ -440,7 +444,7 @@ footer.site-footer p {
   border-radius: 50%;
   background: var(--border);
   flex-shrink: 0;
-  box-shadow: 0 0 0 2px var(--bg-raised), 0 0 0 3px rgba(139, 157, 255, 0.4);
+  box-shadow: 0 0 0 2px var(--bg-raised), 0 0 0 3px rgba(67, 56, 202, 0.4);
 }
 
 .gh-stats-name {
@@ -501,7 +505,7 @@ footer.site-footer p {
   align-items: center;
   gap: 6px;
   border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(38, 33, 92, 0.02);
   border-radius: 999px;
   padding: 3px 10px 3px 8px;
   font-size: 0.75rem;
@@ -549,7 +553,7 @@ footer.site-footer p {
 
 .repo-card {
   border: 1px solid var(--border);
-  background: linear-gradient(160deg, var(--bg-raised), rgba(255, 255, 255, 0.02));
+  background: linear-gradient(160deg, var(--bg-raised), rgba(38, 33, 92, 0.02));
   border-radius: 12px;
   padding: 18px 20px;
   transition: transform 0.15s ease, border-color 0.15s ease;
@@ -557,7 +561,7 @@ footer.site-footer p {
 
 .repo-card:hover {
   transform: translateY(-2px);
-  border-color: rgba(139, 157, 255, 0.4);
+  border-color: rgba(67, 56, 202, 0.4);
 }
 
 .repo-card-head {
@@ -621,8 +625,8 @@ footer.site-footer p {
 .now-callout {
   display: block;
   position: relative;
-  border: 1px solid rgba(78, 232, 181, 0.35);
-  background: linear-gradient(145deg, rgba(78, 232, 181, 0.07), rgba(139, 157, 255, 0.05));
+  border: 1px solid rgba(15, 143, 108, 0.35);
+  background: linear-gradient(145deg, rgba(15, 143, 108, 0.07), rgba(67, 56, 202, 0.05));
   border-radius: 14px;
   padding: 18px 22px 14px;
   margin: 24px 0 8px;
@@ -740,7 +744,7 @@ footer.site-footer p {
 
 .rss-link:hover {
   color: var(--accent2);
-  filter: drop-shadow(0 0 6px rgba(255, 107, 214, 0.6));
+  filter: drop-shadow(0 0 6px rgba(214, 51, 127, 0.6));
 }
 
 .arch-gallery {
@@ -756,7 +760,7 @@ footer.site-footer p {
   display: block;
   position: relative;
   border: 1px solid var(--border);
-  background: linear-gradient(160deg, var(--bg-raised), rgba(255, 255, 255, 0.02));
+  background: linear-gradient(160deg, var(--bg-raised), rgba(38, 33, 92, 0.02));
   border-radius: 14px;
   padding: 22px;
   transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
@@ -764,8 +768,8 @@ footer.site-footer p {
 
 .arch-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(139, 157, 255, 0.5);
-  box-shadow: 0 16px 40px rgba(139, 157, 255, 0.15);
+  border-color: rgba(67, 56, 202, 0.5);
+  box-shadow: 0 16px 40px rgba(67, 56, 202, 0.15);
   text-decoration: none;
 }
 
@@ -847,10 +851,21 @@ footer.site-footer,
   color: var(--accent2);
 }
 
-/* Newsletter signup box at the end of posts (added 2026-10-10) */
-.subscribe{margin:56px 0 12px;padding:28px 28px 8px;border:1px solid var(--border);border-radius:16px;
-  background:linear-gradient(135deg,rgba(139,157,255,.10),rgba(255,107,214,.06));}
-.subscribe-kicker{margin:0;font-family:var(--font-mono);font-size:.85rem;color:var(--accent);}
+/* Newsletter signup box at the end of posts (added 2026-10-10, restyled for the light theme) */
+.subscribe{margin:56px 0 12px;padding:28px;border:1px solid var(--border);border-radius:16px;
+  background:linear-gradient(135deg,rgba(67,56,202,.07),rgba(214,51,127,.06)),var(--bg-raised);
+  box-shadow:0 6px 24px rgba(38,33,92,.07);}
+.subscribe-kicker{margin:0;font-family:var(--font-mono);font-size:.85rem;color:var(--accent2);}
 .subscribe-title{margin:.3rem 0 .4rem;font-family:var(--font-display);font-style:italic;font-size:1.9rem;color:var(--fg);}
-.subscribe-sub{margin:0 0 12px;color:var(--muted);}
-.subscribe-frame{width:100%;max-width:520px;height:150px;border:0;background:transparent;}
+.subscribe-sub{margin:0 0 16px;color:var(--muted);}
+.subscribe-form{display:flex;gap:10px;flex-wrap:wrap;max-width:520px;}
+.subscribe-form input[type=email]{flex:1 1 240px;padding:12px 16px;border:1px solid var(--border);border-radius:999px;
+  background:#fff;color:var(--fg);font:inherit;font-size:1rem;}
+.subscribe-form input[type=email]:focus{outline:2px solid var(--accent);outline-offset:1px;}
+.subscribe-form button{padding:12px 22px;border:0;border-radius:999px;background:var(--accent2);color:#fff;
+  font:inherit;font-weight:700;cursor:pointer;}
+.subscribe-form button:hover{filter:brightness(1.08);}
+.subscribe-fine{margin:10px 0 0;font-size:.78rem;color:var(--muted);}
+
+/* Diagrams keep a light background inside articles (code blocks are dark) */
+article.single pre.mermaid{background:transparent;color:inherit;border:none;padding:0;}
